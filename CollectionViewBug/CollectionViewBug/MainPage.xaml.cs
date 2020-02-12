@@ -14,17 +14,23 @@ namespace CollectionViewBug
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
+        bool boolVal = true;
+
         public MainPage()
         {
             InitializeComponent();
             BindingContext = this;
         }
 
-
         public List<string> Collect { get; set; } = new List<string>();
 
-        bool boolVal;
-        private void Button_Clicked(object sender, EventArgs e)
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            SetCollect();
+        }
+
+        void SetCollect()
         {
             if (boolVal)
                 Collect = new List<string>()
@@ -40,6 +46,11 @@ namespace CollectionViewBug
                 };
             OnPropertyChanged(nameof(Collect));
             boolVal = !boolVal;
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            SetCollect();
         }
     }
 }
