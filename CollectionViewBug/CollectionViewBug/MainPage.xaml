@@ -4,12 +4,12 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="CollectionViewBug.MainPage">
+             x:Class="CollectionViewBug.MainPage" BackgroundColor="Orange">
 
-    <StackLayout>
+    <StackLayout Margin="30">
         <CollectionView ItemsSource="{Binding Collect}" BackgroundColor="Red">
             <CollectionView.ItemsLayout>
-                <GridItemsLayout Orientation="Vertical" Span="2" />
+                <GridItemsLayout Orientation="Vertical" Span="2" HorizontalItemSpacing="5" VerticalItemSpacing="5"/>
             </CollectionView.ItemsLayout>
             <CollectionView.ItemTemplate>
                 <DataTemplate>
@@ -20,8 +20,21 @@
             </CollectionView.ItemTemplate>
         </CollectionView>
 
-        
-        <Button Text="Change coollect" Clicked="Button_Clicked"/>
+        <CollectionView ItemsSource="{Binding Collect}" BackgroundColor="Red">
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Orientation="Vertical" Span="4" HorizontalItemSpacing="5" VerticalItemSpacing="5"/>
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout BackgroundColor="White" HeightRequest="40">
+                        <Label Text="{Binding .}" TextColor="Black" BackgroundColor="Transparent"/>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+
+        <Button Text="Change coollect" Clicked="Button_Clicked" BackgroundColor="Green" TextColor="White" Margin="10" HeightRequest="40"/>
     </StackLayout>
 
 </ContentPage>
