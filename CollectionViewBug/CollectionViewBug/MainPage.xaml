@@ -7,34 +7,10 @@
              x:Class="CollectionViewBug.MainPage" BackgroundColor="Orange">
 
     <StackLayout Margin="30">
-        <CollectionView ItemsSource="{Binding Collect}" BackgroundColor="Red">
-            <CollectionView.ItemsLayout>
-                <GridItemsLayout Orientation="Vertical" Span="2" HorizontalItemSpacing="5" VerticalItemSpacing="5"/>
-            </CollectionView.ItemsLayout>
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <StackLayout BackgroundColor="White" HeightRequest="40">
-                        <Label Text="{Binding .}" TextColor="Black" BackgroundColor="Transparent"/>
-                    </StackLayout>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
-
-        <CollectionView ItemsSource="{Binding Collect}" BackgroundColor="Red">
-            <CollectionView.ItemsLayout>
-                <GridItemsLayout Orientation="Vertical" Span="4" HorizontalItemSpacing="5" VerticalItemSpacing="5"/>
-            </CollectionView.ItemsLayout>
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <StackLayout BackgroundColor="White" HeightRequest="40">
-                        <Label Text="{Binding .}" TextColor="Black" BackgroundColor="Transparent"/>
-                    </StackLayout>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
 
 
-        <Button Text="Change coollect" Clicked="Button_Clicked" BackgroundColor="Green" TextColor="White" Margin="10" HeightRequest="40"/>
+        <Button x:Name="iosButton" Text="Ios Page Bug" Clicked="IosButton_Clicked"  BackgroundColor="Green" TextColor="White" Margin="10" HeightRequest="40"/>
+        <Button x:Name="droidButton" Text="Android Page Bug" Clicked="DroidButton_Clicked" BackgroundColor="Green" TextColor="White" Margin="10" HeightRequest="40"/>
     </StackLayout>
 
 </ContentPage>

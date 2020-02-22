@@ -14,43 +14,20 @@ namespace CollectionViewBug
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
-        bool boolVal = true;
 
         public MainPage()
         {
             InitializeComponent();
-            BindingContext = this;
         }
 
-        public List<string> Collect { get; set; } = new List<string>();
-
-        protected override void OnAppearing()
+        private void IosButton_Clicked(object sender, EventArgs e)
         {
-            base.OnAppearing();
-            SetCollect();
+            Navigation.PushAsync(new IosBugPage());
         }
 
-        void SetCollect()
+        private void DroidButton_Clicked(object sender, EventArgs e)
         {
-            if (boolVal)
-                Collect = new List<string>()
-                {
-                    "wefwrtrthhrtefwef"
-                };
-            else
-                Collect = new List<string>()
-                {
-                    "sgerthgerg",
-                    "ewfwerthrtfwef",
-                    "ewfwerthrthfwefwe"
-                };
-            OnPropertyChanged(nameof(Collect));
-            boolVal = !boolVal;
-        }
-
-        private void Button_Clicked(object sender, EventArgs e)
-        {
-            SetCollect();
+            Navigation.PushAsync(new AndroidBugPage());
         }
     }
 }
