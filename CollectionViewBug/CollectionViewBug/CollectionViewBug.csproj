@@ -11,16 +11,25 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.4.0.991640" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
+    <PackageReference Include="Xamarin.Forms" Version="4.5.0.356" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="AndroidBugPage.xaml.cs">
+    <Compile Update="BugPages\AndroidBugPage.xaml.cs">
       <DependentUpon>AndroidBugPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="IosBugPage.xaml.cs">
+    <Compile Update="BugPages\FooterHeaderBug.xaml.cs">
+      <DependentUpon>FooterHeaderBug.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="BugPages\IosBugPage.xaml.cs">
       <DependentUpon>IosBugPage.xaml</DependentUpon>
     </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="BugPages\FooterHeaderBug.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

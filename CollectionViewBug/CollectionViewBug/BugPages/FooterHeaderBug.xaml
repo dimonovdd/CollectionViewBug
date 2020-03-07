@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CollectionViewBug.BugPages.IOSFooterHeaderBugPage">
+    <ContentPage.Content>
+        <CollectionView ItemsSource="{Binding Collect}" BackgroundColor="Red">
+
+            <CollectionView.Header>
+                <StackLayout HeightRequest="900" BackgroundColor="Green">
+                    <Entry BackgroundColor="Blue" Placeholder="Entry" TextColor="Black" VerticalOptions="Start"/>
+                    <Entry BackgroundColor="Blue" Placeholder="Entry" TextColor="Black" VerticalOptions="CenterAndExpand"/>
+                    <Entry BackgroundColor="Blue" Placeholder="Entry" TextColor="Black" VerticalOptions="End"/>
+                </StackLayout>
+            </CollectionView.Header>
+
+
+
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Vertical" ItemSpacing="10" SnapPointsType="None" SnapPointsAlignment="Start"/>
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout BackgroundColor="White" HeightRequest="40">
+                        <Label Text="{Binding .}" TextColor="Black" BackgroundColor="Transparent"/>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+
+            <CollectionView.Footer>
+                <StackLayout HeightRequest="900" BackgroundColor="Yellow">
+                    <Entry BackgroundColor="Blue" Placeholder="Entry" TextColor="Black" VerticalOptions="Start"/>
+                    <Entry BackgroundColor="Blue" Placeholder="Entry" TextColor="Black" VerticalOptions="CenterAndExpand"/>
+                    <Entry BackgroundColor="Blue" Placeholder="Entry" TextColor="Black" VerticalOptions="End"/>
+                </StackLayout>
+            </CollectionView.Footer>
+
+
+
+        </CollectionView>
+
+
+    </ContentPage.Content>
+</ContentPage>

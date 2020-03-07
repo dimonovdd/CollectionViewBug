@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CollectionViewBug.BugPages;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -28,6 +29,11 @@ namespace CollectionViewBug
         private void DroidButton_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new AndroidBugPage());
+        }
+
+        private void HeaderButton_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new IOSFooterHeaderBugPage());
         }
     }
 }

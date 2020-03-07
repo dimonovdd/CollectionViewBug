@@ -9,8 +9,9 @@
     <StackLayout Margin="30">
 
 
-        <Button x:Name="iosButton" Text="Ios Page Bug" Clicked="IosButton_Clicked"  BackgroundColor="Green" TextColor="White" Margin="10" HeightRequest="40"/>
-        <Button x:Name="droidButton" Text="Android Page Bug" Clicked="DroidButton_Clicked" BackgroundColor="Green" TextColor="White" Margin="10" HeightRequest="40"/>
+        <Button Text="Ios Page Bug" Clicked="IosButton_Clicked"  BackgroundColor="Green" TextColor="White" Margin="10" HeightRequest="40"/>
+        <Button Text="Android Page Bug" Clicked="DroidButton_Clicked" BackgroundColor="Green" TextColor="White" Margin="10" HeightRequest="40"/>
+        <Button Text="IOS Header/Footer Page Bug" Clicked="HeaderButton_Clicked" BackgroundColor="Green" TextColor="White" Margin="10" HeightRequest="40"/>
     </StackLayout>
 
 </ContentPage>
