@@ -122,13 +122,13 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.5.0.356" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.5.1" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\CollectionViewBug\CollectionViewBug.csproj">
-      <Project>{1A1FEDEF-D122-441F-BB4C-523472AB477A}</Project>
+      <Project>{76DD4BD4-5AF8-4C75-8B1C-64891D9F8A6A}</Project>
       <Name>CollectionViewBug</Name>
     </ProjectReference>
   </ItemGroup>
